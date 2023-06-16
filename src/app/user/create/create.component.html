@@ -1,0 +1,19 @@
+<h1>Registrar usuario</h1>
+
+<form (ngSubmit)="createUser()" #createForm="ngForm">
+    <div>
+        <label for="">usuario</label>
+        <input type="text" name="username" [(ngModel)]="username" required>
+    </div>
+    <div>
+        <label for="">correo</label>
+        <input type="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div>
+        <label for="">Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" [disabled]="!createForm.form.valid">
+        Registrarse
+    </button>
+</form>
